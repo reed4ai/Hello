@@ -12,20 +12,18 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    defaults:
-      runs: true
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Set up CodeQL
-        uses: github/codeql-action/setup@v2
-
+      # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: python
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:python"

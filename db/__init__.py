@@ -15,7 +15,7 @@ def connect_to_database():
     # 假設有一個資料庫連線的函數
     database_connect(username, password)
 
-    print("Connected to database using username and password", username, password)
+    print("Connected to database")
     return True
 
 

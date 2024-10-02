@@ -16,6 +16,7 @@ def connect_to_database():
     database_connect(username, password)
 
     print("Connected to database")
+    # Avoid logging sensitive information
     return True
 
 
